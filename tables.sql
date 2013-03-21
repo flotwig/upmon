@@ -4,7 +4,7 @@ CREATE TABLE `groups` (
   `url` text,
   `visible` tinyint(4) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf32;
 
 CREATE TABLE `servers` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -16,4 +16,4 @@ CREATE TABLE `servers` (
   `group` int(11) DEFAULT '0',
   `desc` text,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=98 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf32;
