@@ -10,6 +10,7 @@ Installing is easy.
 3. Visit install.php in your web browser.
 4. Edit the database and add in servers and groups and ports to check.
 5. Put check.php in a cron job.
+
 Specials
 -----
 Specials are special PHP files used to process certain kinds of servers which require more in-depth information. Configure them in config.php. If you want to write one, use specials/minecraft.php as an example.
