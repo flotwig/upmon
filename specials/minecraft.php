@@ -4,7 +4,7 @@ function special_25565($server,$port){
 	if(!$ping) return array('up'=>false);
 	return array(
 		'up'	=>true,
-		'desc'	=>formatMCMessage(htmlentities($ping[2])),
+		'desc'	=>formatMCMessage($ping[2]),
 	);
 }
 // https://gist.github.com/flotwig/5795159
@@ -29,9 +29,9 @@ function formatMCMessage($message){
 	$out='';
 	foreach($in as $chunk){
 		if(isset($colorMap[$chunk[0]])){
-			$out.='<span style="color:#'.$colorMap[$chunk[0]].';">'.mb_substr($chunk,1).'</span>';
+			$out.='<span style="color:#'.$colorMap[$chunk[0]].';">'.htmlentities(mb_substr($chunk,1)).'</span>';
 		}else{
-			$out.=mb_substr($chunk,1);
+			$out.=htmlentities(mb_substr($chunk,1));
 		}
 	}
 	return str_replace(0x00,'',$out);
