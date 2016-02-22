@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @aspect.name %>
+</p>
+
+<p>
+  <strong>Last up:</strong>
+  <%= @aspect.last_up %>
+</p>
+
+<%= link_to 'Edit', edit_aspect_path(@aspect) %> |
+<%= link_to 'Back', aspects_path %>

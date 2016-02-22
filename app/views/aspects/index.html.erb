@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Aspects</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Last up</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @aspects.each do |aspect| %>
+      <tr>
+        <td><%= aspect.name %></td>
+        <td><%= aspect.last_up %></td>
+        <td><%= link_to 'Show', aspect %></td>
+        <td><%= link_to 'Edit', edit_aspect_path(aspect) %></td>
+        <td><%= link_to 'Destroy', aspect, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Aspect', new_aspect_path %>
