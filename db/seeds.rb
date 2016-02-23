@@ -9,3 +9,4 @@
 State.create(name: 'Good', css: 'success')
 State.create(name: 'Warning', css: 'warning')
 State.create(name: 'Bad', css: 'danger')
+AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
